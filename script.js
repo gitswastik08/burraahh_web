@@ -63,10 +63,10 @@ document.getElementById("facebook").addEventListener("click", function () {
 // ✅ LOCOMOTIVE + SCROLLTRIGGER SETUP
 // ==================================================
 
-// // Scroll to top on reload (optional)
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
+// Scroll to top on reload (optional)
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 // ===== Init Locomotive Function =====
 function initLoco() {
@@ -74,10 +74,19 @@ function initLoco() {
 
   const locoScroll = new LocomotiveScroll({
     el: scrollEl,
+    inertia: 0.8,
     smooth: true,
-    multiplier: 0.7,
-    smartphone: { smooth: true },
-    tablet: { smooth: true },
+    
+     smoothMobile: true,
+
+    getDirection: true,
+   
+    tablet: {
+      smooth: true,
+       breakpoint: 0, 
+      inertia: 0.8,
+      getDirection: true,
+    },
   });
 
   // ===== GSAP + Locomotive Integration =====
