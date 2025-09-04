@@ -49,15 +49,15 @@ function showBurrahToast(msg) {
 // ✅ SOCIAL MEDIA LINKS
 // ==================================================
 document.getElementById("instagram").addEventListener("click", function () {
-  window.open("https://www.instagram.com/sipburrah?igsh=cnEzbTd0dzBweHVw", "_blank");
+  window.open(
+    "https://www.instagram.com/sipburrah?igsh=cnEzbTd0dzBweHVw",
+    "_blank"
+  );
 });
 
 document.getElementById("facebook").addEventListener("click", function () {
   window.open("https://www.facebook.com/share/19GYamXkgC/", "_blank");
 });
-
-
-
 
 // ==================================================
 // ✅ LOCOMOTIVE + SCROLLTRIGGER SETUP
@@ -72,11 +72,22 @@ function initLoco() {
   const scrollEl = document.querySelector(".main");
 
   const locoScroll = new LocomotiveScroll({
-    el: scrollEl,
+    el: document.querySelector(".main"),
     smooth: true,
-    smoothMobile: true,
-    inertia: 0.8,
     getDirection: true,
+    inertia: 0.8, // desktop inertia
+    multiplier: 1, // desktop scroll speed
+    smoothMobile: true, // enable mobile smooth scrolling
+    smartphone: {
+      smooth: true,
+      inertia: 0.9, // mobile inertia
+      multiplier: 1.5, // mobile scroll speed
+    },
+    tablet: {
+      smooth: true,
+      inertia: 0.6, // tablet inertia
+      multiplier: 1.3, // tablet scroll speed
+    },
   });
 
   // ===== GSAP + Locomotive Integration =====
@@ -641,8 +652,8 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: ".sixth_section",
         start: "top top",
-        end: "+=150%", 
-        pin: ".video_wrapper", 
+        end: "+=150%",
+        pin: ".video_wrapper",
         pinSpacing: true,
         scrub: true,
         scroller: ".main",
@@ -654,7 +665,7 @@ ScrollTrigger.matchMedia({
       "--r": "150vmax",
       delay: 0,
       ease: "none",
-      duration: 10, 
+      duration: 10,
     });
 
     gsap.to(".circular-text", {
@@ -743,7 +754,7 @@ gsap.utils.toArray("#formSection .inputbox").forEach((input, i) => {
     scrollTrigger: {
       trigger: input,
       start: "top 90%",
-      end:"top 75%", 
+      end: "top 75%",
       toggleActions: "play none none reverse",
       scroller: ".main",
       scrub: true,
@@ -761,7 +772,7 @@ gsap.utils.toArray("#formSection .inputbox").forEach((input, i) => {
   tl.from(
     input,
     {
-      clipPath: "inset(0 100% 0 0)", 
+      clipPath: "inset(0 100% 0 0)",
       opacity: 0,
       x: 50,
       duration: 0.8,
