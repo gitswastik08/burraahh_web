@@ -1,0 +1,1273 @@
+/* ================================
+   ✅ Global Resets & Scrollbar
+================================ */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================
+   ✅ Font Imports
+================================ */
+@font-face {
+  font-family: "Antonio";
+  src: url("./assets/fonts/antonio/Antonio.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Antonio_bold";
+  src: url("./assets/fonts/antonio/Antonio-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima";
+  src: url("./assets/fonts/proxima/ProximaSansRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== Burrah Toast ===== */
+#burrahToast {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, yellow, #567813);
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  transform: translateX(300px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+}
+#burrahToast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================================
+   ✅ Global Styles
+================================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Antonio, sans-serif;
+}
+
+/* ================================
+   ✅ Main Wrapper
+================================ */
+.main {
+  position: relative;
+  background-color: #222123;
+  overflow: hidden;
+}
+
+/* ================================
+   ✅ Hero Section
+================================ */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #222123;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.video {
+  height: 100%;
+  /* width: 100%; */
+  background-size: cover;
+  /* scale: 1.8; */
+}
+
+.content-div {
+  position: absolute;
+  color: #fff;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Content Styling */
+.content {
+  width: full;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14vw;
+  font-weight: 900;
+  line-height: 120%;
+  color: yellow;
+  font-family: Antonio;
+  letter-spacing: 0vw;
+  -webkit-text-stroke: 2px #035523; /* Green stroke */
+  paint-order: stroke fill; /* Makes stroke appear properly */
+}
+
+h1 span {
+  display: inline-block;
+}
+
+.content h3 {
+  border-top: 6px solid #87a45f;
+  text-transform: uppercase;
+  font-size: 4vw;
+  font-family: Antonio;
+  line-height: 120%;
+  background-color: #02742e;
+  color: #fff;
+  padding: 1.8vw 2vw;
+  transform: rotate(-4deg);
+  letter-spacing: 0.5vw;
+  text-align: center;
+}
+
+.content p {
+  text-align: center;
+  padding: 1.8vw 3vw;
+  text-transform: capitalize;
+  letter-spacing: 0.1vw;
+  font-size: 1.5vw;
+  font-family: proxima;
+  font-weight: 800;
+  color: #1c100a;
+}
+
+/* ================================
+   ✅ Animated Button (Liquid Effect)
+================================ */
+a {
+  position: relative;
+  padding: 6px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+a span {
+  position: relative;
+  color: #42271a;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-family: proxima;
+  z-index: 1;
+}
+
+a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+a .liquid::after,
+a .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #fff;
+}
+
+a .liquid::before {
+  border-radius: 45%;
+  background: #b35b32;
+  animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.454);
+  animation: animate 10s linear infinite;
+}
+
+a:hover .liquid {
+  top: -120px;
+}
+
+/* Liquid Animation */
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/* ================================
+   ✅ Second Section
+================================ */
+.second_section {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(90, 113, 49);
+}
+.second_section h1 {
+  line-height: 7vw;
+  position: relative;
+  text-align: center;
+  font-family: antonio;
+  text-transform: uppercase;
+  font-size: 91.5px;
+  color: #faeade12;
+}
+
+.second_section h1 .word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.thats_burrah {
+  position: relative;
+  z-index: 10;
+  transform: rotate(5deg);
+  text-align: center;
+  background-color: yellow;
+  color: #02742e;
+  outline: 9px solid darkolivegreen; /* smoother than border on rotation */
+  padding: 1.1vw 2vw;
+  font-size: 91.5px;
+  font-weight: 600;
+}
+
+/* ================================
+   ✅ Third Section (Slider)
+================================ */
+.third_section {
+  width: 100%;
+  height: 100vh;
+  background: #185610;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-section {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-lower {
+  padding: 4vw;
+  height: 90%;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.slider-lower span {
+  display: inline-block; /* zaruri hai taaki transform apply ho */
+}
+
+/* First Slide */
+#slide_1 {
+  padding: 6vw 8vw;
+  height: 100%;
+  display: flex;
+  gap: 0.7vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide_1 h1 {
+  white-space: nowrap;
+  font-size: 101.5px;
+  text-transform: uppercase;
+}
+
+#slide_1 span {
+  position: relative;
+  z-index: 10;
+  transform: rotate(-5deg);
+  text-align: center;
+  background-color: yellow;
+  color: #185610;
+  outline: 9px solid #42271a; /* smoother than border on rotation */
+  padding: 0.5vw 4vw;
+  text-transform: uppercase;
+  font-size: 91.5px;
+  font-weight: 600;
+}
+
+/* Extra Slide */
+#slide4 {
+  min-width: 10vw;
+  height: 95%;
+}
+
+.slide {
+  position: relative;
+  min-width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95%;
+  margin: 0 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slide h1 {
+  font-family: Antonio;
+  letter-spacing: 0.6vw;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 4vw;
+  left: 4vw;
+  color: #185610;
+  z-index: 10;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+/* Slide Backgrounds */
+.slide .rangila_container {
+  background-image: url(./assets/Rangila/3.png);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+.slide .mastana_container {
+  background-image: url(./assets/Mastana/6.png);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  /* background-position: center; */
+  border-radius: 2vw;
+}
+
+/* Decorative Elements */
+.bottle {
+  height: 100%;
+  position: absolute;
+  top: 42%;
+  left: 59%;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.fruits {
+  width: 100%;
+  position: absolute;
+  top: 40.5%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.loc {
+  position: absolute;
+  top: -1vw;
+  width: 100%;
+}
+
+/* ================================
+   ✅ Fourth Section
+================================ */
+.fourth_section {
+  width: 100%;
+  height: 130vh;
+  background-color: #ffbb49;
+  position: relative;
+}
+
+.fourth_upper {
+  padding-top: 20vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.fourth_section .contentt {
+  padding: 1vw 3vw;
+}
+
+.contentt h1 {
+  line-height: 7vw;
+  font-family: antonio;
+  text-transform: uppercase;
+  font-size: 91.5px;
+  color: #1f5513;
+  margin-bottom: 0.2vw;
+  position: relative;
+  z-index: 8;
+}
+
+.c_span {
+  text-transform: uppercase;
+  z-index: 10;
+  position: relative;
+  transform: rotate(-3deg);
+  display: inline-block;
+  text-align: center;
+  background-color: #1f5513;
+  color: #ffff00;
+  outline: 9px solid #e2a948;
+  padding: 0.5vw 2vw;
+  font-size: 91.5px;
+  font-weight: 600;
+}
+
+/* USP Text */
+.usp {
+  position: relative;
+  right: 3vw;
+  top: 1vw;
+}
+
+.usp p {
+  text-align: right;
+  font-family: proxima;
+  font-weight: 800;
+  color: #42271a;
+  letter-spacing: 2px;
+  line-height: 3vh;
+  font-size: 1.2vw;
+}
+
+.BodyGood_bg {
+  width: 90%;
+  position: absolute;
+  top: 35.3vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ================================
+   ✅ Burrah Nutrition Bar (Splyt Style)
+================================ */
+:root {
+  --nutri-bg: #efb04c; /* warm orange background (matches base theme) */
+  --nutri-ring: #2f5729; /* deep green ring (same as top dripping green) */
+  --nutri-text: #3b2314; /* dark brown text */
+  --nutri-muted: #6b4a2f; /* softer brown for secondary text */
+}
+
+.burrah-nutri-wrap {
+  position: relative;
+  top: 24vw;
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  padding: 24px 16px;
+  place-items: center;
+}
+
+.burrah-nutri-bar {
+  width: min(1180px, 92vw);
+  background: var(--nutri-bg);
+  color: var(--nutri-text);
+  border-radius: 48px;
+  padding: clamp(14px, 2vw, 24px) clamp(14px, 3vw, 36px);
+  border: 6px solid var(--nutri-ring);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), inset 0 -2px 0 #1f5513a9;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  position: relative;
+}
+
+/* Nutrition Items */
+.burrah-item {
+  text-align: left;
+  padding: clamp(8px, 1.6vw, 14px) clamp(8px, 2vw, 18px);
+  position: relative;
+  min-height: 92px;
+}
+.burrah-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 14%;
+  bottom: 14%;
+  width: 1px;
+  background: #1f5513a9;
+}
+
+.burrah-title {
+  font-family: proxima, system-ui, sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  opacity: 0.9;
+}
+
+.burrah-sub {
+  font-family: proxima, system-ui, sans-serif;
+  font-size: clamp(11px, 0.9vw, 13px);
+  color: var(--nutri-muted);
+  margin-top: 6px;
+}
+
+.burrah-value {
+  font-family: Antonio, sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.1;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   ✅ Fifth Section
+================================ */
+.fifth_section {
+  font-family: proxima;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #194b13; /* dark bg like reference */
+  padding: 7vh 2vw;
+  gap: 6vh;
+}
+
+.fifth_section .intro {
+  color: #eee9e6;
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.4;
+  opacity: 0.85;
+  word-spacing: 3px;
+}
+
+/* Advantage Blocks */
+.advantages {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+}
+
+.adv-block {
+  outline: 9px solid #194b13;
+  font-family: antonio;
+  font-weight: 800;
+  font-size: 7vw;
+  white-space: norap;
+  text-transform: uppercase;
+  padding: 1vw 3vw;
+  color: #222123;
+  width: fit-content;
+  margin: 0 auto;
+  transform: rotate(-2deg); /* default tilt */
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternate tilt for variation */
+.adv-block:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* Advantage Colors */
+.orange {
+  background: #b9893d;
+  color: #fff;
+}
+.cream {
+  background: #f8f1e7;
+  color: #111;
+}
+.red {
+  background: #556b2f;
+  color: #fff;
+}
+.gold {
+  background: #c9a646;
+  color: #111;
+}
+
+/* Outro */
+.fifth_section .outro {
+  color: #eee9e6;
+  font-weight: 500;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.4;
+  opacity: 0.85;
+  word-spacing: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+/* *********************************************************************8 */
+/* ================================
+   ✅ Sixth Section (Video Overlay)
+================================ */
+.sixth_section {
+  background-color: #194b13;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+/* 🎥 Video container */
+.video_wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 📽️ Video styling */
+.video_wrapper video {
+  width: 100%;
+  height: 99.5%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ▶️ Play button wrapper */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔄 Circular text around play button */
+.circular-text {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  fill: #ffffff9b;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ▶️ Play icon circle */
+.play-icon {
+  position: relative;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.73);
+  background-color: #0000003f;
+  backdrop-filter: blur(16px); /* 🔥 background blur */
+  -webkit-backdrop-filter: blur(16px); /* Safari support */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ▶️ Icon inside play circle */
+.play-icon i {
+  font-size: 4vw;
+}
+
+/* 🕳️ Donut overlay (transparent hole expands) */
+.video_wrapper .layer {
+  position: absolute;
+  border: none;
+  inset: 0;
+  background-color: #194b13; /* overlay color */
+  z-index: 2;
+
+  /* hole radius variable (small to start) */
+  --r: 6vmax;
+
+  /* mask: center transparent, outside opaque */
+  -webkit-mask: radial-gradient(
+    circle var(--r) at 50% 50%,
+    transparent 0,
+    transparent calc(var(--r) - 2px),
+    /* pehle -1px tha */ #fff calc(var(--r) - 2px),
+    /* same overlap */ #fff 100%
+  );
+  mask: radial-gradient(
+    circle var(--r) at 50% 50%,
+    transparent 0,
+    transparent calc(var(--r) - 2px),
+    #fff calc(var(--r) - 2px),
+    #fff 100%
+  );
+}
+
+/* ================================
+   ✅ Seventh Section
+================================ */
+.seventh_section {
+  padding: 0 4vw;
+  width: 100%;
+  height: 100vh;
+  background: #ffbb49;
+  z-index: 7;
+  position: relative;
+  transform: translate(0%);
+}
+
+/* Headings in 7th section */
+.seventh_section h1 {
+  font-family: antonio;
+  text-transform: uppercase;
+  font-size: 15vw;
+}
+
+/* First heading */
+.seventh_section h1:nth-child(1) {
+  color: #185610;
+  text-align: right;
+}
+
+/* Second heading */
+.seventh_section h1:nth-child(2) {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* Third heading */
+.seventh_section h1:nth-child(3) {
+  color: #1c3c14;
+}
+
+/* ================================
+   ✅ Footer Section
+================================ */
+.footer_section {
+  width: 100%;
+  height: 100vh;
+  background-color: #15320e;
+  font-family: proxima, sans-serif;
+}
+
+/* 🔼 Upper footer (heading + social links) */
+.upper_footer {
+  color: #faeade;
+  width: full;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3vw;
+}
+
+/* Footer heading */
+.upper_footer h2 {
+  font-size: 8vw;
+}
+
+/* Social media links wrapper */
+.connect_us {
+  display: flex;
+  gap: 2vw;
+}
+
+/* Social media icon style */
+.social_media {
+  padding: 1.3vw;
+  border-radius: 50%;
+  border: 1px solid #ffffff36;
+}
+
+/* Hover effect */
+.social_media:hover {
+  background-color: #1c4a10;
+}
+
+/* Social icons */
+.social_media i {
+  font-size: 2vw;
+}
+
+/* 🔽 Lower footer (bottles + form) */
+.lower_footer {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #f5f5f576;
+}
+
+/* Left bottle side */
+.footer_bottle {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+/* Bottle 1 */
+.b1 {
+  position: absolute;
+  bottom: 0;
+  transform: rotate(9deg);
+  left: 30%;
+  height: 100%;
+}
+
+/* Bottle 2 */
+.b2 {
+  position: absolute;
+  height: 90%;
+  left: 60%;
+  bottom: 0;
+  transform: rotate(-22deg);
+}
+
+/* Right form section */
+#formSection {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4vw;
+}
+
+/* Form wrapper */
+form {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4vh;
+}
+
+/* Input + dropdown common */
+.inputbox,
+.inputbox select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  padding: 10px;
+  padding-left: 0;
+  font-family: Antonio;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+/* Input box style */
+.inputbox {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc; /* off-white */
+  color: #fff;
+  display: block;
+  font-size: 2.1vw;
+  outline: none;
+  width: 100%;
+  position: relative;
+}
+
+/* Placeholder styling */
+.inputbox::placeholder {
+  color: #ddddddc4; /* off-white */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Remove arrows (spinners) from number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Override Chrome/Edge autofill yellow/white background */
+.inputbox:-webkit-autofill,
+.inputbox:-webkit-autofill:hover,
+.inputbox:-webkit-autofill:focus,
+.inputbox:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #15310f inset !important; /* same as bg color */
+  -webkit-text-fill-color: #fff !important; /* text color */
+  caret-color: #fff !important; /* blinking cursor color */
+  transition: background-color 5000s ease-in-out 0s; /* hack: prevent flash */
+}
+
+/* Dropdown style */
+select {
+  color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Dropdown options */
+option {
+  background: #343532; /* dark dropdown bg */
+  color: #fff;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 3vh;
+  padding: 1vw 3vw;
+  text-align: center;
+  background-color: #d4c305; /* matches hero h3 bg */
+  color: #000; /* text color from h3 */
+  font-family: Antonio, sans-serif;
+  font-size: 2vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+  background-color: #c6b605; /* matches green border theme */
+  transform: scale(1.05);
+}
+
+/* ===== Responsive / Mobile Styles ===== */
+@media (max-width: 600px) {
+  /* Reset page basics for mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  #main {
+    min-height: 100vh;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    background-image: url(./assets/mobile_bg.jpg);
+    background-size: cover;
+  }
+
+  /* Hide video on mobile */
+  .video {
+    display: none;
+  }
+
+  .content-div {
+    height: 40%;
+  }
+
+  .content {
+    gap: 1vh;
+  }
+
+  /* Responsive typography */
+  .content h1 {
+    font-size: 30vw;
+    white-space: nowrap;
+  }
+
+  .content h3 {
+    font-size: 10.5vw;
+    padding: 4vw 2vw;
+  }
+
+  .content p {
+    font-size: 9vw;
+    margin: 6vw 0;
+  }
+
+  .second_section {
+    position: relative;
+    height: 90vh;
+    z-index: 11;
+  }
+
+  .second_section h1 {
+    line-height: 15vw;
+    padding: 1.1vw 10vw;
+    font-size: 43px;
+  }
+
+  .thats_burrah {
+    padding: 1vw 6vw;
+    margin: 1vw 0;
+    font-size: 45.5px;
+  }
+
+  /* third section */
+  .slider-lower {
+    height: 100%;
+    gap: 10vw;
+    flex-direction: column;
+  }
+
+  #slide_1 {
+    gap: 0.6vh;
+  }
+
+  #slide_1 h1 {
+    font-size: 51.5px;
+  }
+
+  #slide_1 span {
+    color: #185610;
+    outline: 9px solid #185610;
+    font-size: 51.5px;
+  }
+
+  #slide4 {
+    min-width: 0;
+    height: 0;
+  }
+
+  .slide {
+    min-width: 90vw;
+    height: 100%;
+  }
+
+  .slide h1 {
+    bottom: 3vw;
+    font-size: 8vw;
+  }
+
+  .bottle {
+    height: 110%;
+    top: 44%;
+    left: 55%;
+  }
+
+  .fruits {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none; /* long-press block on iOS */
+  }
+
+  .fourth_section {
+    height: 100vh;
+  }
+
+  .fourth_upper {
+    padding-top: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .contentt h1 {
+    font-size: 61.5px;
+    margin-bottom: 8vw;
+  }
+
+  .contentt span {
+    font-size: 56.5px;
+  }
+
+  .usp {
+    padding: 0vw 8vw;
+    top: 10vw;
+  }
+
+  .usp p {
+    text-align: left;
+    line-height: 6vw;
+    font-size: 4vw;
+  }
+
+  .BodyGood_bg {
+    width: 160vw;
+    top: 48vh;
+  }
+
+  .burrah-nutri-wrap {
+    top: 40vh;
+  }
+
+  .burrah-nutri-bar {
+    grid-template-columns: repeat(3, 1fr); /* sirf 3 column */
+  }
+
+  .burrah-item:first-child,
+  .burrah-item:last-child {
+    display: none; /* side wale hide */
+  }
+
+  /* ===== Fifth Section ===== */
+  .fifth_section {
+    min-height: 40vh;
+    gap: 8vh;
+  }
+
+  .fifth_section .intro {
+    font-size: 6vw;
+  }
+
+  .advantages {
+    gap: 6vw;
+  }
+
+  .adv-block {
+    font-size: 12.2vw;
+  }
+
+  .fifth_section .outro {
+    font-size: 6vw;
+  }
+
+  .seventh_section h1 {
+    font-size: 22vw;
+  }
+
+  .upper_footer h2 {
+    font-size: 12vw;
+  }
+
+  .connect_us {
+    gap: 4vw;
+  }
+
+  .social_media {
+    padding: 2vw;
+  }
+
+  .social_media i {
+    font-size: 8vw;
+  }
+
+  .upper_footer {
+    height: 30%;
+    gap: 4vw;
+  }
+
+  .lower_footer {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f5f5f576;
+  }
+
+  #formSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4vw;
+  }
+
+  form {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4vh;
+  }
+
+  .inputbox,
+  .inputbox select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    padding: 10px;
+    padding-left: 0;
+    font-family: Antonio;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+  }
+
+  .inputbox {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc; /* off-white */
+    color: #fff;
+    display: block;
+    font-size: 7.1vw;
+    outline: none;
+    width: 100%;
+    position: relative;
+  }
+
+  .inputbox::placeholder {
+    color: #ddddddc4; /* off-white */
+    opacity: 1; /* start invisible */
+    transition: opacity 0.3s ease;
+  }
+
+  select {
+    color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  option {
+    background: #343532; /* dark dropdown bg */
+    color: #fff;
+  }
+
+  .submit-btn {
+    font-size: 8vw;
+  
+  }
+
+  .footer_bottle {
+    display: none;
+  }
+}

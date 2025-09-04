@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Locomotive Scroll CSS for smooth scrolling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <!-- Remixicon for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- ================= HERO SECTION ================= -->
+        <div class="hero">
+            <video class="video" autoplay muted src="./assets/bg2.mp4"></video>
+            <div class="content-div">
+                <div class="content">
+                    <h1>burrah</h1> <!-- Main headline -->
+                    <h3>swad ka dhmaka !</h3> <!-- Subheading / tagline -->
+                    <p>Not just a drink. <br> It’s a feeling you carry with you.</p>
+                    <a href="#">
+                        <span>try It</span>
+                        <div class="liquid"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECOND SECTION ================= -->
+        <div class="second_section">
+            <h1>A crafted beverage that <br> isn’t just made to quench thirst</h1>
+            <span class="thats_burrah">That’s BURRAH</span>
+            <h1>It’s made to spark joy <br> conversations and connection</h1>
+        </div>
+
+        <!-- ================= THIRD SECTION (Flavours Slider) ================= -->
+        <div class="third_section">
+            <div class="slider-section">
+                <div class="slider-lower">
+
+                    <!-- Slide 1 -->
+                    <div id="slide_1">
+                        <h1>we have 2</h1>
+                        <span class="thats_burrah">freaking</span>
+                        <h1>delicious flavors</h1>
+                    </div>
+
+                    <!-- Slide 2: Rangila -->
+                    <div class="slide">
+                        <div class="rangila_container">
+                            <img class="fruits" src="./assets/Rangila/4.png" alt="">
+                            <img class="bottle" src="./assets/Rangila/2.png" alt="">
+                        </div>
+                        <h1>Rangila</h1>
+                    </div>
+
+                    <!-- Slide 3: Mastana -->
+                    <div class="slide">
+                        <div class="mastana_container">
+                            <img class="fruits" src="./assets/Mastana/8.png" alt="">
+                            <img class="bottle" src="./assets/Mastana/7.png" alt="">
+                        </div>
+                        <h1>Mastana</h1>
+                    </div>
+
+                    <!-- Slide 4 (Empty Placeholder) -->
+                    <div id="slide4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= FOURTH SECTION (Body Good + Nutrition Bar) ================= -->
+        <div class="fourth_section">
+            <img src="./assets/LOC.png" class="loc" alt="">
+            <div class="fourth_upper">
+                <div class="contentt">
+                    <h1>it still does</h1>
+                    <span class="c_span">body good</span>
+                </div>
+                <div class="usp">
+                    <p>Burrah blends the goodness of <br> real fruits, packed with vitamins, <br> antioxidants, and
+                        natural energy.</p>
+                </div>
+            </div>
+
+            <img class="BodyGood_bg" src="./assets/BodyGood_bg.png" alt="">
+
+            <!-- NUTRITION BAR — BURRAH -->
+            <div class="burrah-nutri-wrap">
+                <div class="burrah-nutri-bar">
+                    <div class="burrah-item">
+                        <div class="burrah-title">Energy</div>
+                        <div class="burrah-sub">per 120ml</div>
+                        <div class="burrah-value">52 Kcal</div>
+                    </div>
+                    <div class="burrah-item">
+                        <div class="burrah-title">Carbohydrates</div>
+                        <div class="burrah-sub">up to</div>
+                        <div class="burrah-value">13.08g</div>
+                    </div>
+                    <div class="burrah-item">
+                        <div class="burrah-title">Sugar</div>
+                        <div class="burrah-sub">up to</div>
+                        <div class="burrah-value">13.08g</div>
+                    </div>
+                    <div class="burrah-item">
+                        <div class="burrah-title">Fat</div>
+                        <div class="burrah-sub">total</div>
+                        <div class="burrah-value">0g</div>
+                    </div>
+                    <div class="burrah-item">
+                        <div class="burrah-title">Sodium</div>
+                        <div class="burrah-sub">only</div>
+                        <div class="burrah-value">10.49mg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= FIFTH SECTION (Advantages) ================= -->
+        <div class="fifth_section">
+            <p class="intro">
+                Unlock the Advantages: <br>
+                Explore the Key Benefits of Choosing BURRAH
+            </p>
+
+            <div class="advantages">
+                <h2 class="adv-block orange">REAL FRUITS</h2>
+                <h2 class="adv-block cream">VITAMINS + ENERGY</h2>
+                <h2 class="adv-block red">NO ADDED SUGAR*</h2>
+                <h2 class="adv-block gold">100% NATURAL</h2>
+            </div>
+
+            <p class="outro">And much more...</p>
+        </div>
+
+        <!-- ================= SIXTH SECTION (Play Video Overlay) ================= -->
+        <div class="sixth_section">
+            <div class="video_wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://assets.mixkit.co/videos/10422/10422-720.mp4">
+                </video>
+                <div class="layer"></div>
+
+                <!-- Circular Play Overlay -->
+                <div class="play-overlay">
+                    <svg viewBox="0 0 200 200" class="circular-text">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                        </defs>
+                        <text>
+                            <textPath href="#circlePath" textLength="470">
+                                PLAY VIDEO • PLAY VIDEO • PLAY VIDEO • PLAY VIDEO •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="play-icon"><i class="ri-play-large-fill"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SEVENTH SECTION (Talking Text Animation) ================= -->
+        <div class="seventh_section">
+            <h1>what</h1>
+            <h1>everyone</h1>
+            <h1>talking</h1>
+        </div>
+
+        <!-- ================= FOOTER SECTION ================= -->
+        <div class="footer_section">
+
+            <!-- Upper Footer (Social Links) -->
+            <div class="upper_footer">
+                <h2>#LIVEBURRAHH</h2>
+                <div class="connect_us">
+                    <div id="instagram" class="social_media"><i class="ri-instagram-fill"></i></div>
+                    <div id="facebook" class="social_media"><i class="ri-facebook-circle-fill"></i></div>
+                </div>
+            </div>
+
+            <!-- Lower Footer (Form + Bottle Images) -->
+            <div class="lower_footer">
+                <div id="formSection">
+                    <form id="myForm">
+                        <input class="inputbox" type="text" placeholder="Enter your name" name="name" required>
+                        <input class="inputbox" type="email" placeholder="Enter Your Email" name="email" required>
+                        <input class="inputbox" type="number" placeholder="Enter mo. number" name="contact_no">
+
+                        <!-- City input with suggestions -->
+                        <input class="inputbox" list="cities" placeholder="Select or enter city" name="city" required>
+
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                <div class="footer_bottle">
+                    <img src="./assets/bottle1.png" class="b1" alt="">
+                    <img src="./assets/botttle2.png" class="b2" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- /* ===== Burrah Toast ===== */ -->
+
+    <div id="burrahToast"></div>
+
+
+
+    <!-- ================ SCRIPTS ================= -->
+    <!-- Locomotive Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- GSAP Core for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
