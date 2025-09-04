@@ -67,26 +67,16 @@ document.getElementById("facebook").addEventListener("click", function () {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
 // ===== Init Locomotive Function =====
 function initLoco() {
   const scrollEl = document.querySelector(".main");
 
   const locoScroll = new LocomotiveScroll({
     el: scrollEl,
-    inertia: 0.8,
     smooth: true,
-    
-     smoothMobile: true,
-
+    smoothMobile: true,
+    inertia: 0.8,
     getDirection: true,
-   
-    tablet: {
-      smooth: true,
-       breakpoint: 0, 
-      inertia: 0.8,
-      getDirection: true,
-    },
   });
 
   // ===== GSAP + Locomotive Integration =====
