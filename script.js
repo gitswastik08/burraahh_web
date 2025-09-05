@@ -744,7 +744,59 @@ gsap.from(".seventh_section h1:nth-child(3)", {
   },
 });
 
-gsap.registerPlugin(ScrollTrigger);
+// ================================
+// ✅ Reel Boxes Animations (Desktop + Mobile)
+// ================================
+ScrollTrigger.matchMedia({
+
+  // 💻 Desktop (601px and up)
+  "(min-width: 601px)": function () {
+    gsap.from(".reel_box", {
+      x: 0,
+      y: () => window.innerHeight,
+      xPercent: -50,
+      yPercent: -50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".inner_container",
+        start: "top 100%",
+        end: "top 20%",
+        scrub: true,
+        pin: true,
+        scroller: ".main",
+        // markers: true,
+      },
+    });
+  },
+
+  // 📱 Mobile (600px and below)
+  "(max-width: 600px)": function () {
+    gsap.from(".reel_box", {
+      x: 200,                          // right side se thoda aaye
+      y: () => window.innerHeight,      // bottom se aaye
+      xPercent: -50,
+      yPercent: -30,                    // thoda kam shift mobile ke liye
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".inner_container",
+        start: "top 78%",
+        end: "top 20%",
+        scrub: true,
+        pin: true,
+        scroller: ".main",
+        // markers: true,
+      },
+    });
+  }
+
+});
+
 
 // ================================
 // ✅ Form Section Animations

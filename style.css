@@ -753,7 +753,7 @@ a:hover .liquid {
 .seventh_section {
   padding: 0 4vw;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background: #ffbb49;
   z-index: 7;
   position: relative;
@@ -782,6 +782,70 @@ a:hover .liquid {
 /* Third heading */
 .seventh_section h1:nth-child(3) {
   color: #1c3c14;
+}
+
+.reel_container {
+  width: 85%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.reel_box {
+  height: 60vh;
+  border: 0.5vw solid #ffbb49;
+  border-radius: 2vw;
+  padding: 4wv;
+  overflow: hidden;
+}
+
+.reel_box video {
+  position: relative;
+  height: 60vh;
+}
+
+#r1 {
+  left: 0vw;
+  position: absolute;
+  height: 60vh;
+  z-index: 11;
+  transform: rotate(-10deg);
+}
+
+#r2 {
+  left: 15vw;
+  position: absolute;
+  height: 60vh;
+  z-index: 12;
+  transform: rotate(7deg);
+}
+#r3 {
+  left: 30vw;
+  position: absolute;
+  height: 60vh;
+  z-index: 13;
+  transform: rotate(-4deg);
+}
+#r4 {
+  left: 45vw;
+  position: absolute;
+  height: 60vh;
+  z-index: 14;
+  transform: rotate(5deg);
+}
+#r5 {
+  left: 60vw;
+  position: absolute;
+  height: 60vh;
+  z-index: 15;
+  transform: rotate(12deg);
 }
 
 /* ================================
@@ -1170,6 +1234,73 @@ option {
     font-size: 22vw;
   }
 
+  .reel_container {
+    width: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .inner_container {
+    background-color: red;
+     width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .reel_box {
+   
+    height: 60vh;
+    border: 0.5vw solid #ffbb49;
+    border-radius: 2vw;
+    padding: 4wv;
+    overflow: hidden;
+  }
+
+  .reel_box video {
+    position: relative;
+  }
+
+  #r1 {
+    left: 0vw;
+    position: absolute;
+    height: 60vh;
+    z-index: 11;
+    transform: rotate(-10deg);
+  }
+
+  #r2 {
+    left: 0vw;
+    position: absolute;
+    height: 60vh;
+    z-index: 12;
+    transform: rotate(7deg);
+  }
+  #r3 {
+    left: 0vw;
+    position: absolute;
+    height: 60vh;
+    z-index: 13;
+    transform: rotate(-4deg);
+  }
+  #r4 {
+    left: 0vw;
+    position: absolute;
+    height: 60vh;
+    z-index: 14;
+    transform: rotate(5deg);
+  }
+  #r5 {
+    left: 0vw;
+
+    position: absolute;
+    height: 60vh;
+    z-index: 15;
+    transform: rotate(12deg);
+  }
+
   .upper_footer h2 {
     font-size: 12vw;
   }
@@ -1264,7 +1395,6 @@ option {
 
   .submit-btn {
     font-size: 8vw;
-  
   }
 
   .footer_bottle {
