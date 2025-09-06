@@ -475,7 +475,7 @@ a:hover .liquid {
 .BodyGood_bg {
   width: 90%;
   position: absolute;
-  top: 50vh;
+  top: 40vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -492,7 +492,7 @@ a:hover .liquid {
 
 .burrah-nutri-wrap {
   position: relative;
-  top: 55vh;
+  top: 45vh;
   width: 100%;
   display: grid;
   /* background-color: red; */
