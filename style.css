@@ -96,22 +96,6 @@ body {
   height: 100vh;
   object-fit: cover;  /* maintain aspect ratio aur crop karega */
 }
-/* 
-/* Bade screens ke liye (1024px se upar) */
-/* @media (min-width: 1024px) {
-  .video {
-    width: auto;    
-    height: 100%;     
-  }
-} */
-
-/* Choti screens ke liye (1023px se niche) */
-/* @media (max-width: 1023px) {
-  .video {
-    width: 100%;    
-    height: auto;     
-  }
-}  */
 
 
 .content-div {
@@ -508,7 +492,7 @@ a:hover .liquid {
 
 .burrah-nutri-wrap {
   position: relative;
-  top: 24vw;
+  top: 39.7vh;
   width: 100%;
   display: grid;
   gap: 14px;
