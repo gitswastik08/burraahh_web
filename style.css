@@ -92,26 +92,26 @@ body {
 }
 
 .video {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;  /* maintain aspect ratio aur crop karega */
 }
-
+/* 
 /* Bade screens ke liye (1024px se upar) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .video {
-    width: auto;      /* width automatic hogi */
-    height: 100%;     /* height full screen */
+    width: auto;    
+    height: 100%;     
   }
-}
+} */
 
 /* Choti screens ke liye (1023px se niche) */
-@media (max-width: 1023px) {
+/* @media (max-width: 1023px) {
   .video {
-    width: 100%;      /* width full screen */
-    height: auto;     /* height automatic hogi */
+    width: 100%;    
+    height: auto;     
   }
-}
+}  */
 
 
 .content-div {
