@@ -394,10 +394,10 @@ a:hover .liquid {
 /* Decorative Elements */
 .bottle {
   z-index: 99;
-  height: 98%;
+  height: 100%;
   position: absolute;
   top: 0vh;
-  left: 10vw;
+  left: 11vw;
   transform: rotate(10deg); /* Sirf rotate rakha */
   transform-origin: center center;
   will-change: transform;
@@ -424,7 +424,7 @@ a:hover .liquid {
 .fourth_section {
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 8vw ;
+  padding-bottom: 8vw;
   background-color: #ffbb49;
   position: relative;
 }
@@ -484,7 +484,6 @@ a:hover .liquid {
 }
 
 .bg_container {
-
   height: 80%;
   position: relative;
   display: flex;
@@ -922,15 +921,29 @@ a:hover .liquid {
 
 /* Left bottle side */
 .footer_bottle {
+ font-family: antonio;
   height: 100%;
   width: 50%;
   position: relative;
 }
 
+.crafted-text {
+  position: absolute;
+  right: 2vw;
+  bottom: 0vh;
+  text-align: center;
+  font-size: 1.2vw;
+  text-align: right;
+  line-height: 1.7vw;
+  color: #ffffff6a;  /* halka grey */
+  font-family: proxima;
+}
+
+
 /* Bottle 1 */
 .b1 {
   position: absolute;
-  bottom: 0;
+  bottom:3vh;
   transform: rotate(9deg);
   left: 35%;
   height: 100%;
@@ -941,7 +954,7 @@ a:hover .liquid {
   position: absolute;
   height: 90%;
   left: 60%;
-  bottom: 0;
+  bottom:6vh;
   transform: rotate(-22deg);
 }
 
@@ -1161,8 +1174,8 @@ option {
 
   .bottle {
     height: 100%;
-    top: 0vh;
-    left: 10vw;
+    top: 10vh;
+    left: 30vw;
   }
 
   .fruits {
