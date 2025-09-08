@@ -397,7 +397,7 @@ a:hover .liquid {
   height: 100%;
   position: absolute;
   top: 0vh;
-  left: 11vw;
+  left: 10vw;
   transform: rotate(10deg); /* Sirf rotate rakha */
   transform-origin: center center;
   will-change: transform;
@@ -1173,14 +1173,14 @@ option {
   }
 
   .bottle {
-    height: 100%;
-    top: 10vh;
-    left: 30vw;
+    height: 110%;
+    top: 0vh;
+    left: 10vw;
   }
 
   .fruits {
-    height: 100%;
-    top: 0vh;
+    height: 110%;
+    top: -2vh;
     left: 0vw;
     pointer-events: none;
     user-select: none;
@@ -1193,7 +1193,7 @@ option {
   }
 
   .fourth_upper {
-    padding-top: 30vw;
+    padding-top: 10vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1218,10 +1218,12 @@ option {
     text-align: left;
     line-height: 6vw;
     font-size: 4vw;
+    opacity: 0;
   }
 
   .BodyGood_bg {
-    height: 70%;
+    margin-top: 6vh;
+    height: 45%;
   }
 
   .burrah-nutri-bar {
