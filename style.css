@@ -912,7 +912,7 @@ a:hover .liquid {
 
 /* 🔽 Lower footer (bottles + form) */
 .lower_footer {
-  height: 60%;
+  height: 58%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -925,18 +925,6 @@ a:hover .liquid {
   height: 100%;
   width: 50%;
   position: relative;
-}
-
-.crafted-text {
-  position: absolute;
-  right: 2vw;
-  bottom: 0vh;
-  text-align: center;
-  font-size: 1.2vw;
-  text-align: right;
-  line-height: 1.7vw;
-  color: #ffffff6a;  /* halka grey */
-  font-family: proxima;
 }
 
 
@@ -976,7 +964,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4vh;
+  gap: 3.5vh;
 }
 
 /* Input + dropdown common */
@@ -1070,6 +1058,53 @@ option {
   background-color: #c6b605; /* matches green border theme */
   transform: scale(1.05);
 }
+
+.footer_last {
+  width: 100%;
+  height: 8vh;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0a0a0a2a; /* halka dark bg for footer */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 1.5vw;
+  letter-spacing: 0.5px;
+}
+
+.footer_last p {
+  text-transform: capitalize;
+  font-family: "proxima", sans-serif;
+  
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer_last .heart {
+  animation: heartbeat 1.3s infinite;
+}
+
+.footer_last a {
+  font-family: antonio;
+  letter-spacing: 0.1vw;
+  text-decoration: none;
+  color: #ffce54; /* premium golden shade */
+  font-weight: 100;
+  transition: color 0.3s ease;
+}
+
+.footer_last a:hover {
+  color: #ffd875; /* hover effect thoda light golden */
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
 
 /* ===== Responsive / Mobile Styles ===== */
 @media (max-width: 600px) {
