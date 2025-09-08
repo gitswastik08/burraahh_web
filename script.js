@@ -485,7 +485,6 @@ ScrollTrigger.matchMedia({
 // ==================================================
 // ✅ FOURTH SECTION (Fruits + Bottle Parallax + Text)
 // ==================================================
-
 // ===== Mousemove parallax effect =====
 const slides = document.querySelectorAll(".slide");
 slides.forEach((slide) => {
@@ -504,12 +503,14 @@ slides.forEach((slide) => {
         y: y * 0.05,
         duration: 0.3,
         ease: "power2.out",
+        overwrite: "auto", // prevent jumpy effect
       });
       gsap.to(fruits, {
         x: -x * 0.05,
         y: -y * 0.05,
         duration: 0.3,
         ease: "power2.out",
+        overwrite: "auto",
       });
     });
 

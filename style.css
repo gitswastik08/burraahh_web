@@ -368,38 +368,42 @@ a:hover .liquid {
 /* Slide Backgrounds */
 .slide .rangila_container {
   background-image: url(./assets/Rangila/3.png);
-  height: 100%;
-  width: 100%;
+  height: 80vh;
+  width: 100vw;
   object-fit: cover;
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
 }
 
 .slide .mastana_container {
   background-image: url(./assets/Mastana/6.png);
-  height: 100%;
-  width: 100%;
+  height: 80vh;
+  width: 100vw;
   object-fit: cover;
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   border-radius: 2vw;
 }
 
 /* Decorative Elements */
 .bottle {
-  height: 100%;
+  z-index: 99;
+  height: 98%;
   position: absolute;
-  top: 42%;
-  left: 59%;
-  transform: translate(-50%, -50%) rotate(10deg);
+  top: 0vh;
+  left: 10vw;
+  transform: rotate(10deg); /* Sirf rotate rakha */
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .fruits {
   width: 100%;
   position: absolute;
-  top: 40.5%;
-  left: 55%;
-  transform: translate(-50%, -50%);
+  top: -10vh;
+  left:5vw;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .loc {
@@ -985,6 +989,7 @@ form {
 .inputbox::placeholder {
   color: #ddddddc4; /* off-white */
   opacity: 1;
+ 
   transition: opacity 0.3s ease;
 }
 
