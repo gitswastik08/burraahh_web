@@ -94,9 +94,8 @@ body {
 .video {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;  /* maintain aspect ratio aur crop karega */
+  object-fit: cover; /* maintain aspect ratio aur crop karega */
 }
-
 
 .content-div {
   position: absolute;
@@ -352,6 +351,20 @@ a:hover .liquid {
   overflow: hidden;
 }
 
+#s1 {
+  background-image: url(./assets/Rangila/3.png);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+#s2 {
+  background-image: url(./assets/Mastana/6.png);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
 .slide h1 {
   font-family: Antonio;
   letter-spacing: 0.6vw;
@@ -367,22 +380,15 @@ a:hover .liquid {
 
 /* Slide Backgrounds */
 .slide .rangila_container {
-  background-image: url(./assets/Rangila/3.png);
-  height: 80vh;
-  width: 100vw;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  width: 90%;
+  height: 90%;
+  position: relative;
 }
 
 .slide .mastana_container {
-  background-image: url(./assets/Mastana/6.png);
-  height: 80vh;
-  width: 100vw;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
-  border-radius: 2vw;
+  width: 90%;
+  height: 90%;
+  position: relative;
 }
 
 /* Decorative Elements */
@@ -401,7 +407,7 @@ a:hover .liquid {
   width: 100%;
   position: absolute;
   top: -10vh;
-  left:5vw;
+  left: 5vw;
   transform-origin: center center;
   will-change: transform;
 }
@@ -476,12 +482,17 @@ a:hover .liquid {
   font-size: 1.2vw;
 }
 
+.bg_container {
+  height: 50%;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .BodyGood_bg {
-  height: 60%;
-  position: absolute;
-  top: 45vh;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 100vh;
 }
 
 /* ================================
@@ -495,12 +506,8 @@ a:hover .liquid {
 }
 
 .burrah-nutri-wrap {
-  position: relative;
-  top: 50.5vh;
   width: 100%;
   display: grid;
-  /* background-color: red; */
-  padding: 1.4vw 0;
   place-items: center;
 }
 
@@ -509,7 +516,7 @@ a:hover .liquid {
   background: var(--nutri-bg);
   color: var(--nutri-text);
   border-radius: 48px;
-  padding:1.5vw 6vw;
+  padding: 1.5vw 6vw;
   border: 6px solid var(--nutri-ring);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), inset 0 -2px 0 #1f5513a9;
   display: grid;
@@ -857,7 +864,7 @@ a:hover .liquid {
 .footer_section {
   width: 100%;
   height: 100vh;
-  padding-bottom: 5vh ;
+  padding-bottom: 5vh;
   background-color: #15320e;
   font-family: proxima, sans-serif;
 }
@@ -989,7 +996,7 @@ form {
 .inputbox::placeholder {
   color: #ddddddc4; /* off-white */
   opacity: 1;
- 
+
   transition: opacity 0.3s ease;
 }
 
@@ -1151,12 +1158,15 @@ option {
   }
 
   .bottle {
-    height: 110%;
-    top: 44%;
-    left: 55%;
+    height: 100%;
+    top: 0vh;
+    left: 10vw;
   }
 
   .fruits {
+    height: 100%;
+    top: 0vh;
+    left: 0vw;
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
@@ -1196,13 +1206,11 @@ option {
   }
 
   .BodyGood_bg {
-    width: 160vw;
-    top: 48vh;
+ height: 70%;
+   
   }
 
-  .burrah-nutri-wrap {
-    top: 50vh;
-  }
+  
 
   .burrah-nutri-bar {
     grid-template-columns: repeat(3, 1fr); /* sirf 3 column */
@@ -1249,14 +1257,13 @@ option {
 
   .inner_container {
     background-color: red;
-     width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     position: relative;
   }
 
   .reel_box {
-   
     height: 60vh;
     border: 0.5vw solid #ffbb49;
     border-radius: 2vw;
