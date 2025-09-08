@@ -67,28 +67,30 @@ document.getElementById("facebook").addEventListener("click", function () {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-// ===== Init Locomotive Function =====
+// // ===== Init Locomotive Function =====
 function initLoco() {
   const scrollEl = document.querySelector(".main");
 
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".main"),
+ const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".main"),
+  smooth: true,
+  getDirection: true,
+  inertia: 0.8, // desktop inertia
+  multiplier: 1.8, // ⬅️ desktop scroll speed fast
+
+  smoothMobile: true, 
+  smartphone: {
     smooth: true,
-    getDirection: true,
-    inertia: 0.8, // desktop inertia
-    multiplier: 1, // desktop scroll speed
-    smoothMobile: true, // enable mobile smooth scrolling
-    smartphone: {
-      smooth: true,
-      inertia: 0.9, // mobile inertia
-      multiplier: 1.5, // mobile scroll speed
-    },
-    tablet: {
-      smooth: true,
-      inertia: 0.6, // tablet inertia
-      multiplier: 1.3, // tablet scroll speed
-    },
-  });
+    inertia: 0.9,
+    multiplier: 2.2, // ⬅️ mobile scroll speed faster
+  },
+  tablet: {
+    smooth: true,
+    inertia: 0.6,
+    multiplier: 2, // ⬅️ tablet scroll speed faster
+  },
+});
+
 
   // ===== GSAP + Locomotive Integration =====
   gsap.registerPlugin(ScrollTrigger);
