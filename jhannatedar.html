@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burrah • Jhannatedar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="product-page jhannatedar-page">
+    <header class="product-hero jhannatedar-theme">
+        <h1>Jhannatedar</h1>
+        <p>Sharp soda sparkle with a gold-standard finish. Jhannatedar keeps it clean, desi, and absolutely electrifying.</p>
+    </header>
+
+    <!-- Mobile-only back button positioned after heading texts but before bottle -->
+    <a href="index.html" class="flavor-cta jhannatedar-btn mobile-back-btn" id="backToFlavorsMobile">Back to Flavours</a>
+
+    <main class="product-content">
+        <div class="product-media">
+            <img src="./assets/Rangila/2.png" alt="Jhannatedar Bottle" />
+        </div>
+        <div class="product-info">
+            <h2><span class="flavor-name">Jhannatedar</span><br><span class="flavor-tagline">Soda Water</span></h2>
+            <p>Bright fizz, zero fuss. Jhannatedar is crafted for that instant “burrah!” kick—only taste, no waste, and the kind of sparkle that wakes up every gathering.</p>
+
+            <div class="chips">
+                <span class="chip">Soda Spark</span>
+                <span class="chip">Only Taste</span>
+                <span class="chip">No Waste</span>
+                <span class="chip">Desi Energy</span>
+            </div>
+
+            <div class="claims-band">
+                <span>No artificial colours</span>
+                <span>No artificial sweeteners</span>
+                <span>Non‑alcoholic</span>
+                <span>Serve chilled</span>
+            </div>
+
+            <div class="taste-grid">
+                <div class="taste">Sweetness <strong>Low</strong></div>
+                <div class="taste">Tartness <strong>Low</strong></div>
+                <div class="taste">Zing <strong>High</strong></div>
+                <div class="taste">Afterfeel <strong>Clean</strong></div>
+            </div>
+
+            <a href="index.html" class="flavor-cta jhannatedar-btn" id="backToFlavors">Back to Flavours</a>
+        </div>
+    </main>
+
+    <section class="ingredients-section">
+        <h3>What’s Inside</h3>
+        <ul class="ingredients-list">
+            <li>Carbonated filtered water</li>
+            <li>Sugar</li>
+            <li>Citric acid (INS 330)</li>
+            <li>Natural soda flavour</li>
+            <li>Natural colour: Caramel (INS 150A)</li>
+            <li>Contains no allergens</li>
+        </ul>
+    </section>
+
+    <section class="nutrition-section">
+       <div class="nutrition-section-content">
+        <h3>Nutrition Facts (per 100ml)</h3>
+        <div class="nutri-grid">
+            <div class="nutri-row">
+                <div class="nutri-cell">Energy</div>
+                <div class="nutri-cell value">43.6 kcal</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Protein</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Total Carbohydrates</div>
+                <div class="nutri-cell value">10.9 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Dietary Fiber</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Total Sugar</div>
+                <div class="nutri-cell value">10.9 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Added Sugar</div>
+                <div class="nutri-cell value">10.9 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Total Fat</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Saturated Fat</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Monounsaturated Fat</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Polyunsaturated Fat</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Trans Fat</div>
+                <div class="nutri-cell value">0 g</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Cholesterol</div>
+                <div class="nutri-cell value">0 mg</div>
+            </div>
+            <div class="nutri-row">
+                <div class="nutri-cell">Sodium</div>
+                <div class="nutri-cell value">8.74 mg</div>
+            </div>
+        </div>
+       </div>
+
+       <div class="burrah-is-safe-container">
+        <img src="./assets/burrahIsSafe.png" alt="Burrah Is Safe" class="burrah-is-safe">
+       </div>
+    </section>
+
+    <script>
+        // Handle back to flavors button clicks
+        document.addEventListener('DOMContentLoaded', function () {
+            const backButton = document.getElementById('backToFlavors');
+            const backButtonMobile = document.getElementById('backToFlavorsMobile');
+
+            function handleBackClick(e) {
+                e.preventDefault();
+                // Navigate to index.html and scroll to top
+                window.location.href = 'index.html';
+                // Ensure page scrolls to top when loaded
+                window.addEventListener('load', function () {
+                    window.scrollTo(0, 0);
+                });
+            }
+
+            if (backButton) {
+                backButton.addEventListener('click', handleBackClick);
+            }
+            if (backButtonMobile) {
+                backButtonMobile.addEventListener('click', handleBackClick);
+            }
+        });
+    </script>
+</body>
+
+</html>
+

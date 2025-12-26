@@ -6,6 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- Critical CSS inline to prevent text flash -->
+    <style>
+        /* Critical CSS - Prevents FOUC (Flash of Unstyled Content) */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: inherit;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-size: 1rem;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #222123;
+        }
+
+        .main {
+            position: relative;
+            background-color: #222123;
+            overflow: hidden;
+        }
+
+        /* Critical hero text styles to prevent flash */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background-color: #222123;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+        }
+
+        .bharat-text {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 4.5vw !important;
+            font-weight: 800;
+            line-height: 120%;
+            color: #000000cb;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: 1vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 14vw !important;
+            font-weight: 900;
+            line-height: 100%;
+            margin: 0 0 1vh 0;
+            padding: 0;
+            color: yellow;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: 0vw;
+            -webkit-text-stroke: 2px #035523;
+            paint-order: stroke fill;
+        }
+
+        .content h3 {
+            border-top: 6px solid #87a45f;
+            text-transform: uppercase;
+            font-size: 4vw !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 120%;
+            background-color: #02742e;
+            color: #fff;
+            padding: 1.8vw 2vw;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Mobile critical styles */
+        @media (max-width: 600px) {
+            .bharat-text {
+                font-size: 12vw !important;
+            }
+
+            .content h1 {
+                font-size: 30vw !important;
+            }
+
+            .content h3 {
+                font-size: 8.8vw !important;
+            }
+        }
+    </style>
+
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 
@@ -25,9 +143,15 @@
             <video class="video" autoplay muted src="./assets/bg_video.mp4"></video>
             <div class="content-div">
                 <div class="content">
+                    <h2 class="bharat-text">BHARAT KA </h2> <!-- Bharat text above main headline -->
                     <h1>burrah</h1> <!-- Main headline -->
-                    <h3>swad ka dhmaka !</h3> <!-- Subheading / tagline -->
-                    <p>Not just a drink. <br> It’s a feeling you carry with you.</p>
+                    <div class="hero-bubbles" aria-hidden="true">
+                        <span class="bubble b1"></span>
+                        <span class="bubble b2"></span>
+                        <span class="bubble b3"></span>
+                    </div>
+                    <h3>swad ka dhamaka !</h3> <!-- Subheading / tagline -->
+                    <p>Not just a drink. <br> It's a feeling you carry with you.</p>
                     <a href="#">
                         <span>try It</span>
                         <div class="liquid"></div>
@@ -36,11 +160,18 @@
             </div>
         </div>
 
+
         <!-- ================= SECOND SECTION ================= -->
         <div class="second_section">
-            <h1>A crafted beverage that <br> isn’t just made to quench thirst</h1>
-            <span class="thats_burrah">That’s BURRAH</span>
-            <h1>It’s made to spark joy <br> conversations and connection</h1>
+            <h1>A crafted beverage that <br> isn't just made to quench thirst</h1>
+            <span class="thats_burrah">That's BURRAH</span>
+            <h1>It's made to spark joy <br> conversations and connection</h1>
+            <div class="about_us_btn_wrap">
+                <a href="about.html" class="about_us_btn">
+                    <span>About Us</span>
+                    <div class="btn_liquid"></div>
+                </a>
+            </div>
         </div>
 
         <!-- ================= THIRD SECTION (Flavours Slider) ================= -->
@@ -50,9 +181,9 @@
 
                     <!-- Slide 1 -->
                     <div id="slide_1">
-                        <h1>we have 2</h1>
+                        <h1>Our Desi</h1>
                         <span class="thats_burrah">freaking</span>
-                        <h1>delicious flavors</h1>
+                        <h1>Drinks</h1>
                     </div>
 
                     <!-- Slide 2: Rangila -->
@@ -62,6 +193,9 @@
                             <img class="bottle" src="./assets/Rangila/2.png" alt="">
                         </div>
                         <h1>Rangila</h1>
+                        <div class="flavor-cta-wrap">
+                            <a class="flavor-cta rangila-btn" href="rangila.html">Know Rangila</a>
+                        </div>
                     </div>
 
                     <!-- Slide 3: Mastana -->
@@ -71,6 +205,21 @@
                             <img class="bottle" src="./assets/Mastana/7.png" alt="">
                         </div>
                         <h1>Mastana</h1>
+                        <div class="flavor-cta-wrap">
+                            <a class="flavor-cta mastana-btn" href="mastana.html">Know Mastana</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Jhannatedar -->
+                    <div id="s3" class="slide jhannatedar-slide">
+                        <div class="jhannatedar_container">
+                            <img class="fruits" src="./assets/Rangila/4.png" alt="">
+                            <img class="bottle" src="./assets/Rangila/2.png" alt="">
+                        </div>
+                        <h1>Jhannatedar</h1>
+                        <div class="flavor-cta-wrap">
+                            <a class="flavor-cta jhannatedar-btn" href="jhannatedar.html">Know Jhannatedar</a>
+                        </div>
                     </div>
 
                     <!-- Slide 4 (Empty Placeholder) -->
@@ -104,27 +253,27 @@
                         <div class="burrah-item">
                             <div class="burrah-title">Energy</div>
                             <div class="burrah-sub">per 120ml</div>
-                            <div class="burrah-value">52 Kcal</div>
+                            <div class="burrah-value">52.3 Kcal</div>
                         </div>
                         <div class="burrah-item">
                             <div class="burrah-title">Carbohydrates</div>
-                            <div class="burrah-sub">up to</div>
-                            <div class="burrah-value">13.08g</div>
+                            <div class="burrah-sub">per 120ml</div>
+                            <div class="burrah-value">13.08 g</div>
                         </div>
                         <div class="burrah-item">
                             <div class="burrah-title">Sugar</div>
-                            <div class="burrah-sub">up to</div>
-                            <div class="burrah-value">13.08g</div>
+                            <div class="burrah-sub">per 120ml</div>
+                            <div class="burrah-value">13.08 g</div>
                         </div>
                         <div class="burrah-item">
                             <div class="burrah-title">Fat</div>
                             <div class="burrah-sub">total</div>
-                            <div class="burrah-value">0g</div>
+                            <div class="burrah-value">0 g</div>
                         </div>
                         <div class="burrah-item">
                             <div class="burrah-title">Sodium</div>
-                            <div class="burrah-sub">only</div>
-                            <div class="burrah-value">10.49mg</div>
+                            <div class="burrah-sub">per 120ml</div>
+                            <div class="burrah-value">10.49 mg</div>
                         </div>
                     </div>
                 </div>
@@ -139,10 +288,10 @@
             </p>
 
             <div class="advantages">
-                <h2 class="adv-block orange">REAL FRUITS</h2>
-                <h2 class="adv-block cream">VITAMINS + ENERGY</h2>
-                <h2 class="adv-block red">NO ADDED SUGAR*</h2>
-                <h2 class="adv-block gold">100% NATURAL</h2>
+                <h2 class="adv-block cream">NO ARTIFICIAL COLOURS</h2>
+                <h2 class="adv-block orange">NO ARTIFICIAL PRESERVATIVES</h2>
+                <h2 class="adv-block red">NO ARTIFICIAL SWEETENERS</h2>
+                <h2 class="adv-block gold">NO ARTIFICIAL FLAVOURS</h2>
             </div>
 
             <p class="outro">And much more...</p>
@@ -189,15 +338,25 @@
             </div>
         </div>
 
+        <!-- ================= DISTRIBUTOR SECTION ================= -->
+        <div class="distributor_section">
+            <div class="distributor_content">
+                <h2>Be a Part of Bharat ka BURRAH Team</h2>
+                <p>By bringing BURRAH | Swad Ka to every gali In India</p>
+                <button class="distributor_btn" id="openDistributorModal">Become a Distributor</button>
+            </div>
+        </div>
+
         <!-- ================= FOOTER SECTION ================= -->
         <div class="footer_section">
 
             <!-- Upper Footer (Social Links) -->
             <div class="upper_footer">
-                <h2>#LIVEBURRAHH</h2>
+                <h2>#BHARATKABURRAH</h2>
                 <div class="connect_us">
                     <div id="instagram" class="social_media"><i class="ri-instagram-fill"></i></div>
                     <div id="facebook" class="social_media"><i class="ri-facebook-circle-fill"></i></div>
+                    <div id="linkedin" class="social_media"><i class="ri-linkedin-fill"></i></div>
                 </div>
             </div>
 
@@ -221,10 +380,22 @@
             </div>
 
             <div class="footer_last">
-                <p>
-                    Built with <span class="heart">❤️</span> by
-                    <a href="https://51digitalmedia.com" target="_blank">51DigitalMedia LLP</a>
-                </p>
+                <div class="footer_last_content">
+                    <div class="footer_links">
+                        <div class="footer_links_left">
+                            <a href="docs/privacy-policy.pdf" class="terms_link" target="_blank" rel="noopener">Privacy
+                                Policy (PDF)</a>
+                            <a href="docs/terms-and-conditions.pdf" class="terms_link" target="_blank"
+                                rel="noopener">Terms and Conditions (PDF)</a>
+                        </div>
+                        <button class="contact_us_btn">Contact Us</button>
+                    </div>
+                    <p>
+                        Built with <span class="heart">❤️</span> by
+                        <a href="https://51digitalmedia.com" target="_blank">51DigitalMedia LLP</a>
+                    </p>
+
+                </div>
             </div>
 
 
@@ -233,8 +404,87 @@
     </div>
 
     <!-- /* ===== Burrah Toast ===== */ -->
-
     <div id="burrahToast"></div>
+
+    <!-- ================= DISTRIBUTOR MODAL ================= -->
+    <div class="distributor_modal" id="distributorModal">
+        <div class="modal_overlay" id="modalOverlay"></div>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h3>Become a Distributor</h3>
+                <button class="close_btn" id="closeModal">&times;</button>
+            </div>
+            <form class="distributor_form" id="distributorForm">
+                <div class="form_group">
+                    <input type="text" name="full_name" placeholder="Full Name / Business Name" required
+                        autocomplete="name">
+                </div>
+
+                <div class="form_group">
+                    <input type="email" name="email" placeholder="Email  [OPTIONAL]" autocomplete="email">
+                </div>
+                <div class="form_group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
+                </div>
+                <div class="form_group">
+                    <input type="text" name="address" placeholder="Business Address" required
+                        autocomplete="street-address">
+                </div>
+                <div class="form_group">
+                    <input type="text" name="gst_number" placeholder="GST / Registration Number  [OPTIONAL]"
+                        pattern="[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}"
+                        title="Please enter a valid GST number">
+                </div>
+                <div class="form_group">
+                    <input type="number" name="monthly_sales_volume" placeholder="Monthly Sales Volume (₹)" required
+                        min="0" step="1000">
+                </div>
+                <div class="form_group">
+                    <input type="text" name="interested_in"
+                        placeholder="Interested In (e.g., Distributorship, Retail, Bulk Purchase)" autocomplete="off">
+                </div>
+                <div class="form_group">
+                    <input type="text" name="preferred_category" placeholder="Preferred Product Category" required
+                        list="productCategories">
+                    <datalist id="productCategories">
+                        <option value="Beverages">
+                        <option value="Food & Beverages">
+                        <option value="Health Drinks">
+                        <option value="Energy Drinks">
+                        <option value="Soft Drinks">
+                        <option value="FMCG">
+                    </datalist>
+                </div>
+                <button type="submit" class="submit_btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= CONTACT US MODAL ================= -->
+    <div class="distributor_modal" id="contactModal">
+        <div class="modal_overlay" id="contactModalOverlay"></div>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h3>Contact Us</h3>
+                <button class="close_btn" id="closeContactModal">&times;</button>
+            </div>
+            <form class="distributor_form" id="contactForm">
+                <div class="form_group">
+                    <input type="text" name="name" placeholder="Name" required autocomplete="name">
+                </div>
+                <div class="form_group">
+                    <input type="email" name="email" placeholder="Email  [OPTIONAL]" autocomplete="email">
+                </div>
+                <div class="form_group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
+                </div>
+                <div class="form_group">
+                    <textarea name="message" placeholder="Message" required rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit_btn">Send Message</button>
+            </form>
+        </div>
+    </div>
 
 
 
